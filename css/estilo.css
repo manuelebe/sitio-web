@@ -313,9 +313,9 @@
         .header__nav--boton{
             background-color: #D42229;
             border: black solid 1px;
-            font-size: 1.3rem;
-            width: 50px;
-            height: 40px;
+            font-size: 2rem;
+            width: auto;
+            height: auto;
             box-shadow: 2px 2px 2px 0px #000000ee;
         }
         .header__nav--dropdownmenu{
@@ -362,9 +362,20 @@
         .titulo__text--soporte{
             width: 350px;
         }
+        .nosotros__text{
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+            padding-bottom: 70px;
+            padding-top: 70px;
+            width: 90%;
+            margin: 0 auto;
+        }
         .juego{
             flex-direction: column;
             justify-content: center;
+            padding-right: 0;
+            padding-left: 0;
             .juego__img{
                 img{
                     width: 220px;
@@ -392,7 +403,25 @@
 @media screen and (max-width: 430px){
     .main{
         .titulo__text{
-            width: 250px;
+            font-size: 2rem;
+            width: 60%;
+        }
+        .formulario{
+            padding: 0px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .formulario__name{
+            margin: 0px;
+        }
+        .formulario__email{
+            margin: 0px;
+        }
+        .formulario__com{
+            margin: 0px;
+        }
+        .formulario__submit{
+            margin: 0px;
         }
     }
 }

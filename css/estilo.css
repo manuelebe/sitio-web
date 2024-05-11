@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (3, auto);
+    grid-template-areas:
+     "header"
+     "main"
+     "footer";
+    background-color:#171717;
+    h2, h3{
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        padding: 10px;
+    }
+    p{
+        padding: 10px;
+        padding-top: 0px;
+        line-height: 1.5;
+        text-align: justify;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.1rem;
+    }
+}
+.header{
+    grid-area: header;
+    background-color:#D42229;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header__nav--dropdown{
+        display: none;
+    }
+    .header__logo, .header__nav{
+        img{
+            margin: 1rem;
+            height: 100px;
+            width: 150px;
+        }
+        .header__nav--menu{
+            text-align: center;
+            font-family: "Lato", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            padding: 1rem;
+            list-style-type: none;
+            margin-bottom: 0;
+            li{
+                display: inline-block;
+                font-size: 1.3rem;
+                padding-right: 20px;
+                padding-left: 20px;
+                a{
+                    color: black;
+                    padding: 20px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.main{
+    background-color:#C8C5B9;
+    grid-area: main;
+    .titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+    .titulo__background--index{
+        background-image: url(../imagenes/background-full.jpg);
+    }
+    .titulo__background--juegos{
+        background-image: url(../imagenes/background4.jpg);
+    }
+    .titulo__background--nosotros{
+        background-image: url(../imagenes/background2.jpg);
+    }
+    .titulo__background--soporte{
+        background-image: url(../imagenes/background3.png);
+    }
+    .titulo__background{
+        padding-top: 0;
+        height: 300px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .titulo__text{
+        font-size: 3rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        background-color: #C8C5B9;
+        border: solid black 1px;
+        padding: 10px;
+        box-shadow: 10px 10px 5px 0px #000000da;
+        color: black;
+        text-align: center;
+    }
+    .titulo__text--nosotros{
+        width: 250px;
+    }
+    .juegos{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .juegos__links{
+            text-decoration: none;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+            font-size: 1.5rem;
+            height: 60px;
+        }
+        img{
+            height: 330px;
+            width: 220px;
+        }
+        .juegos__imgtext{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .juegos__border{
+            padding: 10px;
+            padding-bottom: 0;
+            box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.73);
+        }
+        .juegos__sgs{
+            text-wrap: wrap;
+            width: 220px;
+        }
+        .juegos__notop{
+            margin-top: 0;
+        }
+    }
+    .juegoindimg{
+        text-align: center;
+        padding: 20px;
+        padding-top: 0;
+        img{
+            width: 220px;
+            height: 330px;
+        }
+    }
+    .descjuego{
+        text-align: justify;
+    }
+    .formulario{
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        padding-top: 40px;
+        .formulario__text{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1rem;
+        }
+        .formulario__name{
+            width: 250px;
+            padding: 5px;
+            margin: 10px;
+            margin-top: 0;
+        }
+        .formulario__email{
+            width: 250px;
+            padding: 5px;
+            margin: 10px;
+        }
+        .formulario__com{
+            height: 120px;
+            width: 250px;
+            resize: vertical;
+            padding: 5px;
+            margin: 10px;
+        }
+        .formulario__submit{
+            height: 30px;
+            width: 50px;
+            padding: 5px;
+            margin: 10px;
+            margin-bottom: 0;
+        }
+    }
+}
+.footer{
+    grid-area: footer;
+    background-color:#171717;
+    display: flex;
+    justify-content: space-evenly;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2rem;
+    h3{
+        font-size: 1.2rem;
+    }
+    .redes__img{
+        display: flex;
+        margin-top: .5rem;
+        margin-bottom: 3rem;
+        img{
+            background-color: #C8C5B9;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            width: 50px;
+            box-shadow: 5px 5px 2px 0px #000000ee;
+        }
+    }
+    .copyright{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .copyright__text{
+        width: 240px;
+    }
+    .copyright__img{
+        margin-top: .5rem;
+        margin-bottom: 3rem;
+        img{
+            background-color: #C8C5B9;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            width: 50px;
+            box-shadow: 5px 5px 2px 0px #000000ee;
+        }
+    }
+    .redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1000px){
+    .main{
+        .juegos{
+            img{
+                height: 270px;
+                width: 180px;
+            }
+            .juegos__sgs{
+                width: 180px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 850px){
+    .header{
+        .header__nav--menu{
+            display: none;
+        }
+        .header__nav--dropdown{
+            display: block;
+            margin-right: 4rem;
+        }
+        .header__nav--boton{
+            background-color: #D42229;
+            border: black solid 1px;
+            font-size: 1.3rem;
+            width: 50px;
+            height: 40px;
+            box-shadow: 2px 2px 2px 0px #000000ee;
+        }
+        .header__nav--dropdownmenu{
+            background-color: #171717;
+            text-align: center;
+            font-family: "Lato", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            border: black solid 1px;
+        }
+        .header__nav--dropdownitem{
+            font-size: 1.2rem;
+            color:#ffffff;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .main{
+        .juegos{
+            flex-direction: column;
+            img{
+                height: 330px;
+                width: 220px;
+            }
+            h2{
+                padding-bottom: 0;
+            }
+            .juegos__imgtext{
+                margin-bottom: 0;
+            }
+            .juegos__last{
+                margin-bottom: 40px;
+            }
+            .juegos__notop{
+                margin-top: 40px;
+            }
+            .juegos__sgs{
+                width: 220px;
+            }
+        }
+        .titulo__text--soporte{
+            width: 350px;
+        }
+    }
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 430px){
+    .main{
+        .titulo__text{
+            width: 250px;
+        }
+    }
+}

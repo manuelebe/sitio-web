@@ -1,9 +1,12 @@
+/*reseteos*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/*body*/
 .body{
+    /*grid y background color detras de la pagina*/
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -13,6 +16,7 @@
      "main"
      "footer";
     background-color:#171717;
+    /*texto*/
     h2, h3{
         font-family: "Roboto", sans-serif;
         font-weight: 500;
@@ -30,15 +34,18 @@
         font-style: normal;
     }
 }
+/*header*/
 .header{
     grid-area: header;
     background-color:#D42229;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*deshabilitar dropdown*/
     .header__nav--dropdown{
         display: none;
     }
+    /*logo y navegacion*/
     .header__logo, .header__nav{
         img{
             margin: 1rem;
@@ -67,15 +74,18 @@
         }
     }
 }
+/*main*/
 .main{
+    /*background color de main*/
     background-color:#C8C5B9;
     grid-area: main;
+    /*titulos*/
     .titulo{
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2rem;
     }
+    /*imagenes de background*/
     .titulo__background--index{
         background-image: url(../imagenes/background-full.jpg);
     }
@@ -96,6 +106,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
+    /*texto y caja del titulo*/
     .titulo__text{
         font-size: 3rem;
         font-family: "Roboto", sans-serif;
@@ -111,13 +122,16 @@
     .titulo__text--nosotros{
         width: 250px;
     }
+    /*seccion de juegos*/
     .juegos{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        /*decoracion de links*/
         .juegos__links{
             text-decoration: none;
         }
+        /*texto*/
         h2{
             display: flex;
             justify-content: center;
@@ -127,10 +141,12 @@
             font-size: 1.5rem;
             height: 60px;
         }
+        /*tamaño de img*/
         img{
             height: 330px;
             width: 220px;
         }
+        /*alineacion vertical de texto e imagenes*/
         .juegos__imgtext{
             display: flex;
             flex-direction: column;
@@ -138,59 +154,71 @@
             margin-top: 40px;
             margin-bottom: 40px;
         }
+        /*bordes*/
         .juegos__border{
             padding: 10px;
             padding-bottom: 0;
             box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.73);
         }
+        /*wrap de texto*/
         .juegos__sgs{
             text-wrap: wrap;
             width: 220px;
         }
+        /*no margin top*/
         .juegos__notop{
             margin-top: 0;
         }
     }
+    /*juegos individuales*/
     .juego{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         padding: 50px;
+        /*imagen*/
         .juego__img{
             img{
                 width: 258px;
                 height: 387px;
             }
         }
+        /*texto y alineacion vertical*/
         .juego__text{
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 400px;
         }
+        /*titulo*/
         .juego__text--titulo{
             color: black;
             font-size: 2.5rem;
             text-align: center;
         }
+        /*descripcion*/
         .juego__text--desc{
             color: black;
             font-size: 1.3rem;
         }
+        /*boton*/
         .juego__text--boton{
             font-size: 1.5rem;
         }
     }
+    /*video*/
     .juego__video{
         display: flex;
         justify-content: center;
         margin-bottom: 50px;
     }
+    /*borde y responsividad*/
     .juego__video--vid{
         width: 70%;
         height: auto;
         box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.73);
     }
+    /*texto de pag nosotros*/
     .nosotros__text{
         padding: 70px;
     }
@@ -199,6 +227,7 @@
         font-size: 1.3rem;
         text-align: justify;
     }
+    /*formulario*/
     .formulario{
         width: fit-content;
         margin: 0 auto;
@@ -207,6 +236,7 @@
         align-items: center;
         padding: 50px;
         padding-top: 40px;
+        /*secciones individuales del formulario*/
         .formulario__text{
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 1rem;
@@ -238,6 +268,7 @@
         }
     }
 }
+/*footer*/
 .footer{
     grid-area: footer;
     background-color:#171717;
@@ -246,13 +277,16 @@
     color: #ffffff;
     text-align: center;
     padding-top: 2rem;
+    /*texto*/
     h3{
         font-size: 1.2rem;
     }
+    /*seccion de logos de redes*/
     .redes__img{
         display: flex;
         margin-top: .5rem;
         margin-bottom: 3rem;
+        /*imagenes*/
         img{
             background-color: #C8C5B9;
             border-radius: 5px;
@@ -262,14 +296,17 @@
             box-shadow: 5px 5px 2px 0px #000000ee;
         }
     }
+    /*seccion izquierda del footer*/
     .copyright{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+    /*texto*/
     .copyright__text{
         width: 240px;
     }
+    /*logo footer*/
     .copyright__img{
         margin-top: .5rem;
         margin-bottom: 3rem;
@@ -282,13 +319,16 @@
             box-shadow: 5px 5px 2px 0px #000000ee;
         }
     }
+    /*alineacion vertical de la seccion de redes*/
     .redes{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 }
+/*responsividad*/
 @media screen and (max-width: 1000px){
+    /*reducir tamaño de las imagenes*/
     .main{
         .juegos{
             img{
@@ -302,14 +342,18 @@
     }
 }
 @media screen and (max-width: 850px){
+    /*menu dropdown*/
     .header{
+        /*deshabilitar menu original*/
         .header__nav--menu{
             display: none;
         }
+        /*habilitar dropdown*/
         .header__nav--dropdown{
             display: block;
             margin-right: 4rem;
         }
+        /*dropdown*/
         .header__nav--boton{
             background-color: #D42229;
             border: black solid 1px;
@@ -332,11 +376,14 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
+        /*hover items*/
         .header__nav--dropdownitem:hover{
             background-color: #171717
         }
     }
+    /*main*/
     .main{
+        /*juegos en columna, cambios de margin y padding*/
         .juegos{
             flex-direction: column;
             img{
@@ -359,9 +406,11 @@
                 width: 220px;
             }
         }
+        /*titulo soporte*/
         .titulo__text--soporte{
             width: 350px;
         }
+        /*texto en columna*/
         .nosotros__text{
             display: flex;
             flex-direction: column;
@@ -371,6 +420,7 @@
             width: 90%;
             margin: 0 auto;
         }
+        /*juegos individuales en columna*/
         .juego{
             flex-direction: column;
             justify-content: center;
@@ -394,6 +444,7 @@
             width: 85%;
         }
     }
+    /*footer en columna*/
     .footer{
         flex-direction: column;
         justify-content: center;
@@ -402,6 +453,7 @@
 }
 @media screen and (max-width: 430px){
     .main{
+        /*ajuste de tamaños y padding/margin*/
         .titulo__text{
             font-size: 2rem;
             width: 60%;

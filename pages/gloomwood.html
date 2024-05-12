@@ -5,25 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Blood | Español</title>
     <link rel="shortcut icon" href="../imagenes/logo_favicon.png" type="image/x-icon">
+    <!--dependencias a bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--vinculo a estilo propio-->
     <link rel="stylesheet" href="../css/estilo.css">
+    <!--dependencias a fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="body">
+    <!--header-->
     <header class="header">
         <div class="header__logo">
             <img src="../imagenes/logo_negro.png" alt="New Blood">
         </div>
         <nav class="header__nav">
+            <!--navegacion-->
             <ul class="header__nav--menu">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../pages/juegos.html">Juegos</a></li>
                 <li><a href="../pages/nosotros.html">Nosotros</a></li>
                 <li><a href="../pages/soporte.html">Soporte</a></li>
             </ul>
+            <!--navegacion mobile-->
             <div class="dropdown header__nav--dropdown">
                 <button class="btn btn-secondary dropdown-toggle header__nav--boton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     ≡
@@ -36,24 +42,34 @@
                 </ul>
             </div>
     </header>
+    <!--main-->
     <main class="main">
+        <!--seccion superior-->
         <section class="juego">
+            <!--div de imagen-->
             <div class="juego__img">
                 <img src="../imagenes/gloomwood_cover.png" alt="Gloomwood portada">
             </div>
+            <!--div de texto y boton-->
             <div class="juego__text">
+                <!--texto-->
                 <h2 class="juego__text--titulo">Gloomwood</h2>
                 <p class="juego__text--desc">Atrapado en una oscura ciudad victoriana consumida por una antigua maldición, debes planificar tu supervivencia y escape utilizando solo sigilo, un arsenal de armas excéntricas y tu ingenio en esta aventura inquietante inspirada en los grandes juegos de simulación inmersiva y horror de supervivencia de finales de los 90 y principios de los 2000.</p>
+                <!--boton-->
                 <a href="https://store.steampowered.com/app/1150760/Gloomwood/" target="_blank" button type="button" class="btn btn-dark juego__text--boton">Comprar</a>
             </div>
         </section>
+        <!--seccion inferior-->
         <section class="juego__video">
+            <!--controles de video con volumen al 30%-->
             <video controls onloadstart="this.volume=0.3" class="juego__video--vid">
                 <source src="../videos/gloomwood-trailer.mp4" type="video/mp4">
             </video>
         </section>
     </main>
+    <!--footer-->
     <footer class="footer">
+        <!--div contenedor de texto y logo-->
         <div class="copyright">
             <div class="copyright__text">
                 <h3>© New Blood Interactive</h3>                
@@ -62,6 +78,7 @@
                 <img src="../imagenes/logo_blancoynegro.webp" alt="Icono New Blood">
             </div>
         </div>
+        <!--div contenedor de texto y redes-->
         <div class="redes">
             <div>
                 <h3>Síguenos</h3>
@@ -82,6 +99,7 @@
             </div>
         </div>
     </footer> 
+    <!--dependencias a javascript-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

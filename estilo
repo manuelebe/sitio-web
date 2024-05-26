@@ -1,0 +1,479 @@
+/*reseteos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*body*/
+.body{
+    /*grid y background color detras de la pagina*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (3, auto);
+    grid-template-areas:
+     "header"
+     "main"
+     "footer";
+    background-color:#171717;
+    /*texto*/
+    h2, h3{
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        padding: 10px;
+        line-height: 1.5;
+    }
+    p{
+        padding: 10px;
+        padding-top: 0px;
+        line-height: 1.5;
+        text-align: justify;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+/*header*/
+.header{
+    grid-area: header;
+    background-color:#D42229;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*deshabilitar dropdown*/
+    .header__nav--dropdown{
+        display: none;
+    }
+    /*logo y navegacion*/
+    .header__logo, .header__nav{
+        img{
+            margin: 1rem;
+            height: 100px;
+            width: 150px;
+        }
+        .header__nav--menu{
+            text-align: center;
+            font-family: "Lato", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            padding: 1rem;
+            list-style-type: none;
+            margin-bottom: 0;
+            li{
+                display: inline-block;
+                font-size: 1.3rem;
+                padding-right: 20px;
+                padding-left: 20px;
+                a{
+                    color: black;
+                    padding: 20px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+/*main*/
+.main{
+    /*background color de main*/
+    background-color:#C8C5B9;
+    grid-area: main;
+    /*titulos*/
+    .titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*imagenes de background*/
+    .titulo__background--index{
+        background-image: url(../imagenes/background-full.jpg);
+    }
+    .titulo__background--juegos{
+        background-image: url(../imagenes/background4.jpg);
+    }
+    .titulo__background--nosotros{
+        background-image: url(../imagenes/background2.jpg);
+    }
+    .titulo__background--soporte{
+        background-image: url(../imagenes/background3.png);
+    }
+    .titulo__background{
+        padding-top: 0;
+        height: 300px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    /*texto y caja del titulo*/
+    .titulo__text{
+        font-size: 3rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        background-color: #C8C5B9;
+        border: solid black 1px;
+        padding: 10px;
+        box-shadow: 10px 10px 5px 0px #000000da;
+        color: black;
+        text-align: center;
+    }
+    .titulo__text--nosotros{
+        width: 250px;
+    }
+    /*seccion de juegos*/
+    .juegos{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /*decoracion de links*/
+        .juegos__links{
+            text-decoration: none;
+        }
+        /*texto*/
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+            font-size: 1.5rem;
+            height: 60px;
+        }
+        /*tamaño de img*/
+        img{
+            height: 330px;
+            width: 220px;
+        }
+        /*alineacion vertical de texto e imagenes*/
+        .juegos__imgtext{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        /*bordes*/
+        .juegos__border{
+            padding: 10px;
+            padding-bottom: 0;
+            box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.73);
+        }
+        /*wrap de texto*/
+        .juegos__sgs{
+            text-wrap: wrap;
+            width: 220px;
+        }
+        /*no margin top*/
+        .juegos__notop{
+            margin-top: 0;
+        }
+    }
+    /*juegos individuales*/
+    .juego{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 50px;
+        /*imagen*/
+        .juego__img{
+            img{
+                width: 258px;
+                height: 387px;
+            }
+        }
+        /*texto y alineacion vertical*/
+        .juego__text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+        }
+        /*titulo*/
+        .juego__text--titulo{
+            color: black;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        /*descripcion*/
+        .juego__text--desc{
+            color: black;
+            font-size: 1.3rem;
+        }
+        /*boton*/
+        .juego__text--boton{
+            font-size: 1.5rem;
+        }
+    }
+    /*video*/
+    .juego__video{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    /*borde y responsividad*/
+    .juego__video--vid{
+        width: 70%;
+        height: auto;
+        box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.73);
+    }
+    /*texto de pag nosotros*/
+    .nosotros__text{
+        padding: 70px;
+    }
+    .nosotros__text--font{
+        color: black;
+        font-size: 1.3rem;
+        text-align: justify;
+    }
+    /*formulario*/
+    .formulario{
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        padding-top: 40px;
+        /*secciones individuales del formulario*/
+        .formulario__text{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1rem;
+        }
+        .formulario__name{
+            width: 250px;
+            padding: 5px;
+            margin: 10px;
+            margin-top: 0;
+        }
+        .formulario__email{
+            width: 250px;
+            padding: 5px;
+            margin: 10px;
+        }
+        .formulario__com{
+            height: 120px;
+            width: 250px;
+            resize: vertical;
+            padding: 5px;
+            margin: 10px;
+        }
+        .formulario__submit{
+            height: 30px;
+            width: 50px;
+            padding: 5px;
+            margin: 10px;
+            margin-bottom: 0;
+        }
+    }
+}
+/*footer*/
+.footer{
+    grid-area: footer;
+    background-color:#171717;
+    display: flex;
+    justify-content: space-evenly;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2rem;
+    /*texto*/
+    h3{
+        font-size: 1.2rem;
+    }
+    /*seccion de logos de redes*/
+    .redes__img{
+        display: flex;
+        margin-top: .5rem;
+        margin-bottom: 3rem;
+        /*imagenes*/
+        img{
+            background-color: #C8C5B9;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            width: 50px;
+            box-shadow: 5px 5px 2px 0px #000000ee;
+        }
+    }
+    /*seccion izquierda del footer*/
+    .copyright{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /*texto*/
+    .copyright__text{
+        width: 240px;
+    }
+    /*logo footer*/
+    .copyright__img{
+        margin-top: .5rem;
+        margin-bottom: 3rem;
+        img{
+            background-color: #C8C5B9;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            width: 50px;
+            box-shadow: 5px 5px 2px 0px #000000ee;
+        }
+    }
+    /*alineacion vertical de la seccion de redes*/
+    .redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+/*responsividad*/
+@media screen and (max-width: 1000px){
+    /*reducir tamaño de las imagenes*/
+    .main{
+        .juegos{
+            img{
+                height: 270px;
+                width: 180px;
+            }
+            .juegos__sgs{
+                width: 180px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 850px){
+    /*menu dropdown*/
+    .header{
+        /*deshabilitar menu original*/
+        .header__nav--menu{
+            display: none;
+        }
+        /*habilitar dropdown*/
+        .header__nav--dropdown{
+            display: block;
+            margin-right: 4rem;
+        }
+        /*dropdown*/
+        .header__nav--boton{
+            background-color: #D42229;
+            border: black solid 1px;
+            font-size: 2rem;
+            width: auto;
+            height: auto;
+            box-shadow: 2px 2px 2px 0px #000000ee;
+        }
+        .header__nav--dropdownmenu{
+            background-color: #171717;
+            text-align: center;
+            font-family: "Lato", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            border: black solid 1px;
+        }
+        .header__nav--dropdownitem{
+            font-size: 1.2rem;
+            color:#ffffff;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        /*hover items*/
+        .header__nav--dropdownitem:hover{
+            background-color: #171717
+        }
+    }
+    /*main*/
+    .main{
+        /*juegos en columna, cambios de margin y padding*/
+        .juegos{
+            flex-direction: column;
+            img{
+                height: 330px;
+                width: 220px;
+            }
+            h2{
+                padding-bottom: 0;
+            }
+            .juegos__imgtext{
+                margin-bottom: 0;
+            }
+            .juegos__last{
+                margin-bottom: 40px;
+            }
+            .juegos__notop{
+                margin-top: 40px;
+            }
+            .juegos__sgs{
+                width: 220px;
+            }
+        }
+        /*titulo soporte*/
+        .titulo__text--soporte{
+            width: 350px;
+        }
+        /*texto en columna*/
+        .nosotros__text{
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+            padding-bottom: 70px;
+            padding-top: 70px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        /*juegos individuales en columna*/
+        .juego{
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 0;
+            padding-left: 0;
+            .juego__img{
+                img{
+                    width: 220px;
+                    height: 330px;
+                }
+                margin-bottom: 20px;
+            }
+            .juego__text{
+                width: 250px;
+            }
+            .juego__text--desc{
+                text-align: center;
+            }
+        }
+        .juego__video--vid{
+            width: 85%;
+        }
+    }
+    /*footer en columna*/
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 430px){
+    .main{
+        /*ajuste de tamaños y padding/margin*/
+        .titulo__text{
+            font-size: 2rem;
+            width: 60%;
+        }
+        .formulario{
+            padding: 0px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .formulario__name{
+            margin: 0px;
+        }
+        .formulario__email{
+            margin: 0px;
+        }
+        .formulario__com{
+            margin: 0px;
+        }
+        .formulario__submit{
+            margin: 0px;
+        }
+    }
+}

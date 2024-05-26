@@ -1,0 +1,198 @@
+.main{
+    /*background color de main*/
+    background-color: $bgmain;
+    grid-area: main;
+    .titulo{
+        /*titulos*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .titulo__text{
+            /*texto y caja del titulo*/
+            font-size: 3rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            background-color: $bgmain;
+            border: solid black 1px;
+            padding: 10px;
+            box-shadow: 10px 10px 5px 0px #000000da;
+            color: black;
+            text-align: center;
+        }
+        .titulo__text--nosotros{
+            width: 250px;
+        }
+    }
+    .titulo__background{
+        padding-top: 0;
+        height: 300px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .titulo__background--index{
+        /*imagenes de background*/
+        background-image: url(../imagenes/background-full.jpg);
+    }
+    .titulo__background--juegos{
+        background-image: url(../imagenes/background4.jpg);
+    }
+    .titulo__background--nosotros{
+        background-image: url(../imagenes/background2.jpg);
+    }
+    .titulo__background--soporte{
+        background-image: url(../imagenes/background3.png);
+    }
+    .juegos{
+        /*seccion de juegos*/
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .juegos__imgtext{
+            /*alineacion vertical de texto e imagenes*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            .juegos__links{
+                /*decoracion de links*/
+                text-decoration: none;
+                h2{
+                    /*texto*/
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: black;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    height: 60px;
+                }
+                img{
+                    /*tamaño de img*/
+                    height: 330px;
+                    width: 220px;
+                }
+                .juegos__sgs{
+                    /*wrap de texto*/
+                    text-wrap: wrap;
+                    width: 220px;
+                }
+            }
+        }
+        .juegos__border{
+            /*bordes*/
+            padding: 10px;
+            padding-bottom: 0;
+            box-shadow: 0px 0px 16px 4px #000000ba;
+        }
+        .juegos__nobot{
+            /*ajuste margin bottom de seccion 1*/
+            margin-bottom: 50px;
+        }
+        .juegos__notop{
+            /*no margin top en seccion 2*/
+            margin-top: 0;
+        }
+    }
+    .nosotros__text{
+        /*texto de pag nosotros*/
+        padding: 70px;
+        .nosotros__text--font{
+            color: black;
+            font-size: 1.3rem;
+            text-align: justify;
+        }
+    }
+    .formulario{
+        /*formulario*/
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        padding-top: 40px;
+        .formulario__text{
+            /*secciones individuales del formulario*/
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1rem;
+        }
+        .formulario__name{
+            width: 250px;
+            padding: 5px;
+            margin: 10px;
+            margin-top: 0;
+        }
+        .formulario__email{
+            width: 250px;
+            padding: 5px;
+            margin: 10px;
+        }
+        .formulario__com{
+            height: 120px;
+            width: 250px;
+            resize: vertical;
+            padding: 5px;
+            margin: 10px;
+        }
+        .formulario__submit{
+            height: 30px;
+            width: 50px;
+            padding: 5px;
+            margin: 10px;
+            margin-bottom: 0;
+            font-size: .8rem;
+            text-align: center;
+        }
+    }
+    .juego{
+        /*juegos individuales*/
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 50px;
+        .juego__img{
+            img{
+                width: 258px;
+                height: 387px;
+            }
+        }
+        .juego__text{
+            /*texto y alineacion vertical*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40vw;
+            .juego__text--titulo{
+                /*titulo*/
+                color: black;
+                font-size: 2.5rem;
+                text-align: center;
+            }
+           .juego__text--desc{
+                /*descripcion*/
+                color: black;
+                font-size: 1.3rem;
+            }
+            .juego__text--boton{
+                /*boton*/
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .juego__video{
+        /*video*/
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        .juego__video--vid{
+            /*borde y responsividad*/
+            width: 70%;
+            height: auto;
+            box-shadow: 0px 0px 16px 4px #000000ba;
+        }
+    }
+}

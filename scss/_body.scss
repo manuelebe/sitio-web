@@ -1,0 +1,36 @@
+*{
+    /*reseteos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    /*grid y background color detras de la pagina*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (3, auto);
+    grid-template-areas:
+     "header"
+     "main"
+     "footer";
+    background-color: $bgbody;
+    h2, h3{
+        /*texto*/
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        padding: 10px;
+        line-height: 1.5;
+    }
+    p{
+        /*texto*/
+        padding: 10px;
+        padding-top: 0px;
+        line-height: 1.5;
+        text-align: justify;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}

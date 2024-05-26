@@ -1,0 +1,175 @@
+@media screen and (max-width: 1000px){
+    /*reducir tamaño de las imagenes*/
+    .main{
+        .juegos{
+            .juegos__imgtext{
+                .juegos__links{
+                    img{
+                        height: 270px;
+                        width: 180px;
+                    }
+                    .juegos__sgs{
+                        width: 180px;
+                    } 
+                } 
+            }
+        }
+    }
+}
+@media screen and (max-width: 850px){
+    .header{
+        .header__nav{
+            .header__nav--menu{
+                /*deshabilitar menu original*/
+                display: none;
+            }
+            .header__nav--dropdown{
+                /*habilitar dropdown*/
+                display: block;
+                margin-right: 4rem;
+                .header__nav--boton{
+                    /*dropdown*/
+                    background-color: $bgheader;
+                    border: black solid 1px;
+                    font-size: 2rem;
+                    width: auto;
+                    height: auto;
+                    box-shadow: 2px 2px 2px 0px #000000ee;
+                }
+                .header__nav--dropdownmenu{
+                    background-color: $bgbody;
+                    text-align: center;
+                    font-family: "Lato", sans-serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    border: black solid 1px;
+                    .header__nav--dropdownitem{
+                        font-size: 1.2rem;
+                        color:#ffffff;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+                        &:hover{
+                            /*hover items*/
+                            background-color: $bgbody;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main{
+        .juegos{
+            /*juegos en columna, cambios de margin y padding*/
+            flex-direction: column;
+            .juegos__imgtext{
+                margin-top: 70px;
+                margin-bottom: 0;
+                .juegos__links{
+                    img{
+                        height: 330px;
+                        width: 220px;
+                    }
+                    h2{
+                        padding-bottom: 0;
+                    }
+                    .juegos__sgs{
+                        width: 220px;
+                    }
+                }
+            }
+            .juegos__nobot{
+                margin-bottom: 0px;
+                margin-top: 70px;
+            }
+            .juegos__notop{
+                margin-top: 70px;
+            }
+            .juegos__last{
+                margin-bottom: 70px;
+            }
+        }
+        .titulo{
+            .titulo__text--soporte{
+                /*titulo soporte*/
+                width: 350px;
+            }
+        }
+        .nosotros__text{
+            /*texto en columna*/
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+            padding-bottom: 70px;
+            padding-top: 70px;
+            width: 90%;
+            margin: 0 auto;
+        } 
+        .juego{
+            /*juegos individuales en columna*/
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 0;
+            padding-left: 0;
+            .juego__img{
+                margin-bottom: 20px;
+                img{
+                    width: 220px;
+                    height: 330px;
+                }
+            }
+            .juego__text{
+                width: 90%;
+                .juego__text--titulo{
+                    font-size: 2.3rem;
+                }
+                .juego__text--desc{
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+            } 
+        }
+        .juego__video{
+            .juego__video--vid{
+                width: 85%;
+            }
+        }
+    }
+    .footer{
+        /*footer en columna*/
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 430px){
+    .main{
+        .titulo{
+            .titulo__text{
+                font-size: 2rem;
+                width: 60%;
+            }
+        }
+        .formulario{
+            /*mejor responsividad*/
+            padding: 0px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .formulario__name{
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+            .formulario__email{
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+            .formulario__com{
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+            .formulario__submit{
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+        }
+    }
+}

@@ -1,6 +1,9 @@
 @media screen and (max-width: 1000px){
     /*reducir tamaño de las imagenes*/
     .main{
+        .titulo__background--img{
+            width: 150vw;
+        }
         .juegos{
             .juegos__imgtext{
                 .juegos__links{
@@ -58,6 +61,12 @@
         }
     }
     .main{
+        .titulo__background--img{
+            width: 320vw;
+        }
+        .titulo__background--soporte{
+            transform: translate(-300px, 0);
+        }
         .juegos{
             /*juegos en columna, cambios de margin y padding*/
             flex-direction: column;
@@ -94,16 +103,6 @@
                 width: 350px;
             }
         }
-        .nosotros__text{
-            /*texto en columna*/
-            display: flex;
-            flex-direction: column;
-            padding: 0px;
-            padding-bottom: 70px;
-            padding-top: 70px;
-            width: 90%;
-            margin: 0 auto;
-        } 
         .juego{
             /*juegos individuales en columna*/
             flex-direction: column;

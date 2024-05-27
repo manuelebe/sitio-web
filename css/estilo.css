@@ -62,6 +62,7 @@
   margin-bottom: 0;
 }
 .header .header__logo .header__nav--menu li, .header .header__nav .header__nav--menu li {
+  transition: all 0.2s;
   display: inline-block;
   font-size: 1.3rem;
   padding-right: 20px;
@@ -72,10 +73,20 @@
   padding: 20px;
   text-decoration: none;
 }
+.header .header__logo .header__nav--menu .header__nav--inicio:hover, .header .header__nav .header__nav--menu .header__nav--inicio:hover {
+  transform: scale(1.1);
+}
+.header .header__logo .header__nav--menu .header__nav--juegos:hover, .header .header__nav .header__nav--menu .header__nav--juegos:hover {
+  transform: scale(1.1);
+}
+.header .header__logo .header__nav--menu .header__nav--nosotros:hover, .header .header__nav .header__nav--menu .header__nav--nosotros:hover {
+  transform: scale(1.1);
+}
+.header .header__logo .header__nav--menu .header__nav--soporte:hover, .header .header__nav .header__nav--menu .header__nav--soporte:hover {
+  transform: scale(1.1);
+}
 
 .main {
-  /*background color de main*/
-  background-color: #C8C5B9;
   grid-area: main;
 }
 .main .titulo {
@@ -104,25 +115,20 @@
   padding-top: 0;
   height: 300px;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
-.main .titulo__background--index {
-  /*imagenes de background*/
-  background-image: url(../imagenes/background-full.jpg);
-}
-.main .titulo__background--juegos {
-  background-image: url(../imagenes/background4.jpg);
-}
-.main .titulo__background--nosotros {
-  background-image: url(../imagenes/background2.jpg);
-}
-.main .titulo__background--soporte {
-  background-image: url(../imagenes/background3.png);
+.main .titulo__background--img {
+  width: 100vw;
+  height: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
 .main .juegos {
   /*seccion de juegos*/
+  background-color: #C8C5B9;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -175,16 +181,25 @@
 }
 .main .nosotros__text {
   /*texto de pag nosotros*/
-  padding: 70px;
+  background-color: #C8C5B9;
 }
 .main .nosotros__text .nosotros__text--font {
   color: black;
   font-size: 1.3rem;
   text-align: justify;
+  width: 90%;
+  margin: 0 auto;
+}
+.main .nosotros__text .nosotros__text--fontfirst {
+  padding-top: 70px;
+}
+.main .nosotros__text .nosotros__text--fontlast {
+  padding-bottom: 70px;
 }
 .main .formulario {
   /*formulario*/
-  width: fit-content;
+  background-color: #C8C5B9;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -226,6 +241,7 @@
 }
 .main .juego {
   /*juegos individuales*/
+  background-color: #C8C5B9;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -259,9 +275,10 @@
 }
 .main .juego__video {
   /*video*/
+  background-color: #C8C5B9;
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 .main .juego__video .juego__video--vid {
   /*borde y responsividad*/
@@ -321,7 +338,37 @@
   margin-top: 0.5rem;
   margin-bottom: 3rem;
 }
-.footer .redes .redes__img img {
+.footer .redes .redes__img:hover {
+  /*animaciones de hover*/
+}
+.footer .redes .redes__img:hover .redes__img--facebook {
+  opacity: 0.5;
+}
+.footer .redes .redes__img:hover .redes__img--facebook:hover {
+  opacity: 1;
+}
+.footer .redes .redes__img:hover .redes__img--instagram {
+  opacity: 0.5;
+}
+.footer .redes .redes__img:hover .redes__img--instagram:hover {
+  opacity: 1;
+}
+.footer .redes .redes__img:hover .redes__img--twitter {
+  opacity: 0.5;
+}
+.footer .redes .redes__img:hover .redes__img--twitter:hover {
+  opacity: 1;
+}
+.footer .redes .redes__img:hover .redes__img--discord {
+  opacity: 0.5;
+}
+.footer .redes .redes__img:hover .redes__img--discord:hover {
+  opacity: 1;
+}
+.footer .redes .redes__img .redes__img--ind {
+  transition: all 0.2s;
+}
+.footer .redes .redes__img .redes__img--ind img {
   /*imagenes*/
   background-color: #C8C5B9;
   border-radius: 5px;
@@ -334,6 +381,9 @@
 
 @media screen and (max-width: 1000px) {
   /*reducir tamaño de las imagenes*/
+  .main .titulo__background--img {
+    width: 150vw;
+  }
   .main .juegos .juegos__imgtext .juegos__links img {
     height: 270px;
     width: 180px;
@@ -379,6 +429,12 @@
     /*hover items*/
     background-color: #171717;
   }
+  .main .titulo__background--img {
+    width: 320vw;
+  }
+  .main .titulo__background--soporte {
+    transform: translate(-300px, 0);
+  }
   .main .juegos {
     /*juegos en columna, cambios de margin y padding*/
     flex-direction: column;
@@ -410,16 +466,6 @@
   .main .titulo .titulo__text--soporte {
     /*titulo soporte*/
     width: 350px;
-  }
-  .main .nosotros__text {
-    /*texto en columna*/
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-    padding-bottom: 70px;
-    padding-top: 70px;
-    width: 90%;
-    margin: 0 auto;
   }
   .main .juego {
     /*juegos individuales en columna*/

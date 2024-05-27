@@ -1,6 +1,4 @@
 .main{
-    /*background color de main*/
-    background-color: $bgmain;
     grid-area: main;
     .titulo{
         /*titulos*/
@@ -28,25 +26,20 @@
         padding-top: 0;
         height: 300px;
         width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
     }
-    .titulo__background--index{
-        /*imagenes de background*/
-        background-image: url(../imagenes/background-full.jpg);
-    }
-    .titulo__background--juegos{
-        background-image: url(../imagenes/background4.jpg);
-    }
-    .titulo__background--nosotros{
-        background-image: url(../imagenes/background2.jpg);
-    }
-    .titulo__background--soporte{
-        background-image: url(../imagenes/background3.png);
+    .titulo__background--img{
+        width: 100vw;
+        height: auto;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
     }
     .juegos{
         /*seccion de juegos*/
+        background-color: $bgmain;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -99,16 +92,25 @@
     }
     .nosotros__text{
         /*texto de pag nosotros*/
-        padding: 70px;
+        background-color: $bgmain;
         .nosotros__text--font{
             color: black;
             font-size: 1.3rem;
             text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .nosotros__text--fontfirst{
+            padding-top: 70px;
+        }
+        .nosotros__text--fontlast{
+            padding-bottom: 70px;
         }
     }
     .formulario{
         /*formulario*/
-        width: fit-content;
+        background-color: $bgmain;
+        width: 100%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -150,6 +152,7 @@
     }
     .juego{
         /*juegos individuales*/
+        background-color: $bgmain;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -185,9 +188,10 @@
     }
     .juego__video{
         /*video*/
+        background-color: $bgmain;
         display: flex;
         justify-content: center;
-        margin-bottom: 50px;
+        padding-bottom: 50px;
         .juego__video--vid{
             /*borde y responsividad*/
             width: 70%;

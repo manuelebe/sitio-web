@@ -46,7 +46,36 @@
             display: flex;
             margin-top: .5rem;
             margin-bottom: 3rem;
-            img{
+            &:hover{
+                /*animaciones de hover*/
+                .redes__img--facebook{
+                    opacity: 0.5;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+                .redes__img--instagram{
+                    opacity: 0.5;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+                .redes__img--twitter{
+                    opacity: 0.5;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+                .redes__img--discord{
+                    opacity: 0.5;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+            .redes__img--ind{
+                transition: all 0.2s;
+                img{
                 /*imagenes*/
                 background-color: $bgmain;
                 border-radius: 5px;
@@ -55,7 +84,8 @@
                 width: 50px;
                 height: 50px;
                 box-shadow: 5px 5px 2px 0px #000000ee;
+                }
             }
-        }   
+        }
     }
 }

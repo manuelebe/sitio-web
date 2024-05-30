@@ -8,13 +8,15 @@
         /*deshabilitar dropdown*/
         display: none;
     }
-    .header__logo, .header__nav{
+    .header__logo{
         img{
             /*logo*/
             margin: 1rem;
             height: 100px;
             width: 150px;
         }
+    }
+    .header__nav{
         .header__nav--menu{
             /*navegacion*/
             text-align: center;

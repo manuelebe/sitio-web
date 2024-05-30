@@ -45,13 +45,13 @@
   /*deshabilitar dropdown*/
   display: none;
 }
-.header .header__logo img, .header .header__nav img {
+.header .header__logo img {
   /*logo*/
   margin: 1rem;
   height: 100px;
   width: 150px;
 }
-.header .header__logo .header__nav--menu, .header .header__nav .header__nav--menu {
+.header .header__nav .header__nav--menu {
   /*navegacion*/
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -61,28 +61,28 @@
   list-style-type: none;
   margin-bottom: 0;
 }
-.header .header__logo .header__nav--menu li, .header .header__nav .header__nav--menu li {
+.header .header__nav .header__nav--menu li {
   transition: all 0.2s;
   display: inline-block;
   font-size: 1.3rem;
   padding-right: 20px;
   padding-left: 20px;
 }
-.header .header__logo .header__nav--menu li a, .header .header__nav .header__nav--menu li a {
+.header .header__nav .header__nav--menu li a {
   color: black;
   padding: 20px;
   text-decoration: none;
 }
-.header .header__logo .header__nav--menu .header__nav--inicio:hover, .header .header__nav .header__nav--menu .header__nav--inicio:hover {
+.header .header__nav .header__nav--menu .header__nav--inicio:hover {
   transform: scale(1.1);
 }
-.header .header__logo .header__nav--menu .header__nav--juegos:hover, .header .header__nav .header__nav--menu .header__nav--juegos:hover {
+.header .header__nav .header__nav--menu .header__nav--juegos:hover {
   transform: scale(1.1);
 }
-.header .header__logo .header__nav--menu .header__nav--nosotros:hover, .header .header__nav .header__nav--menu .header__nav--nosotros:hover {
+.header .header__nav .header__nav--menu .header__nav--nosotros:hover {
   transform: scale(1.1);
 }
-.header .header__logo .header__nav--menu .header__nav--soporte:hover, .header .header__nav .header__nav--menu .header__nav--soporte:hover {
+.header .header__nav .header__nav--menu .header__nav--soporte:hover {
   transform: scale(1.1);
 }
 

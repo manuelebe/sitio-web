@@ -38,17 +38,19 @@
                     text-decoration: none;
                 }
             }
-            .header__nav--inicio:hover{
-                transform: scale(1.1);
+            .header__nav--inicio{
+                &:hover{
+                    transform: scale(1.1);
+                }    
             }
-            .header__nav--juegos:hover{
-                transform: scale(1.1);
+            .header__nav--juegos{
+                @extend .header__nav--inicio;
             }
-            .header__nav--nosotros:hover{
-                transform: scale(1.1);
+            .header__nav--nosotros{
+                @extend .header__nav--inicio;  
             }
-            .header__nav--soporte:hover{
-                transform: scale(1.1);
+            .header__nav--soporte{
+                @extend .header__nav--inicio;   
             }
         }
     }

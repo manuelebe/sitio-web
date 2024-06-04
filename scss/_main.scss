@@ -123,22 +123,16 @@
             font-size: 1rem;
         }
         .formulario__name{
-            width: 250px;
-            padding: 5px;
-            margin: 10px;
+            @include forms;
             margin-top: 0;
         }
         .formulario__email{
-            width: 250px;
-            padding: 5px;
-            margin: 10px;
+            @include forms;
         }
         .formulario__com{
             height: 120px;
-            width: 250px;
             resize: vertical;
-            padding: 5px;
-            margin: 10px;
+            @include forms;
         }
         .formulario__submit{
             height: 30px;
